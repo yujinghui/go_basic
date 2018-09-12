@@ -21,8 +21,10 @@ func (t T) N() {
 	fmt.Print("N:" + t.S)
 }
 
+/*
 func main() {
 	var i I = T{"hello"}
 	i.M()
 	i.N()
 }
+*/
