@@ -9,6 +9,7 @@ type MyFloat float64
 
 type Abser interface {
 	Abs() float64
+	Abs_hha() float64
 }
 
 type Vertex struct {
@@ -25,11 +26,23 @@ func (f MyFloat) Abs() float64 {
 	return float64(f)
 }
 
-func main() {
+func (v *Vertex) Abs_hha() float64 {
+	fmt.Println("v --> abs_hha")
+	return 0
+}
+func (f MyFloat) Abs_hha() float64 {
+	fmt.Println("f --> abs_hha")
+	return 0
+}
+
+/*
+ func main() {
 	var a Abser
 	f := MyFloat(-math.Sqrt2)
 	v := Vertex{3, 4}
 	a = f
 	a = &v
 	fmt.Println(a.Abs())
+	fmt.Println(a.Abs_hha())
 }
+*/
