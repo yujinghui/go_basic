@@ -1,7 +1,7 @@
 syntax = "proto3";
 package tutorial;  
 message Person {  
-  required string name = 1;  
-  required int32 age = 2;  
-  string email = 3;  
+  string Name = 1;  
+  int32 Age = 2;  
+  string Email = 3;  
 } 
