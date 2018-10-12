@@ -12,8 +12,22 @@ func main() {
 	c := [...]int{1, 2, 3}
 	d := [...]int{8: 18}
 	fmt.Println(arr, pstr, a, b, c, d)
-
 	// element visit
-	intArray := [...]int{1, 2, 4, 5, 6, 3}
-	fmt.Println(len(intArray))
+	intArray := []int{1, 2, 3, 4, 5}
+	modify_array(intArray)
+	fmt.Println(intArray)
+}
+
+/**
+error: 
+    intArray := [...]int{1, 2, 3, 4, 5} -----------this is array
+	modify_array(intArray)
+correct:
+    intArray := []int{1, 2, 3, 4, 5}    -----------this is slice
+	modify_array(intArray)
+*/
+
+func modify_array(arr []int) {
+	arr[0] = 100
+	fmt.Println(arr)
 }
